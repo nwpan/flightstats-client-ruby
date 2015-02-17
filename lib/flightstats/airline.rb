@@ -20,7 +20,7 @@ module FlightStats
         from_response API.get("#{base_path}/all", {}, options), 'airlines'
       end
 
-      def on_date
+      def on_date(year, month, day, options = {})
         from_response API.get("#{base_path}/#{year}/#{month}/#{day}", {}, options), 'airlines'
       end
       
