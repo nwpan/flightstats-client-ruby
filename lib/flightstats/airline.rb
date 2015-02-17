@@ -21,7 +21,7 @@ module FlightStats
       end
 
       def on_date(year, month, day, options = {})
-        from_response API.get("#{base_path}/#{year}/#{month}/#{day}", {}, options), 'airlines'
+        from_response API.get("#{base_path}/active/#{year}/#{month}/#{day}", {}, options), 'airlines'
       end
       
       def by_flight_stats_code(flight_stats_code, options = {})
