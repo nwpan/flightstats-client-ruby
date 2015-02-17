@@ -29,19 +29,19 @@ module FlightStats
       end
       
       def by_iata_code(iata_code, options = {})
-        from_response API.get("#{base_path}/iata/#{iata_code}", {}, options), 'airline'
+        from_response API.get("#{base_path}/iata/#{iata_code}", {}, options), 'airlines'
       end
 
       def by_iata_code_on_date(iata_code, year, month, day, options = {})
-        from_response API.get("#{base_path}/iata/#{iata_code}/#{year}/#{month}/#{day}", {}, options), 'airline'
+        from_response API.get("#{base_path}/iata/#{iata_code}/#{year}/#{month}/#{day}", {}, options), 'airlines'
       end
 
       def by_icao_code(icao_code, options = {})
-        from_response API.get("#{base_path}/icao/#{icao_code}", {}, options), 'airline'
+        from_response API.get("#{base_path}/icao/#{icao_code}", {}, options), 'airlines'
       end
 
       def by_icao_code_on_date(icao_code, year, month, day, options = {})
-        from_response API.get("#{base_path}/icao/#{icao_code}/#{year}/#{month}/#{day}", {}, options), 'airline'
+        from_response API.get("#{base_path}/icao/#{icao_code}/#{year}/#{month}/#{day}", {}, options), 'airlines'
       end
       
       def base_path
